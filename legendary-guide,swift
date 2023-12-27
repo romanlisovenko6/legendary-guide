@@ -1,0 +1,9 @@
+}
+
+func (ud *UserDatabase) Logout(username string) {
+ user, ok := ud.users[username]
+ if ok {
+  user.Logout()
+ } else {
+  fmt.Println("User not found.")
+ }
